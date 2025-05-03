@@ -4,17 +4,27 @@ The Parking Lot System allows different types of vehicles (like cars and bikes) 
 
  Requirements:
   .There are multiple floors and parking slots.
+  
   .Slots are of different types: Two-Wheeler, Car, Truck.
+  
   .Vehicles can enter and exit.
+  
   .A ticket is issued when a vehicle enters and is closed when it exits.
+  
   .Parking charges can be added optionally.
 
 Classes: 
+
   Vehicle: abstract type for all vehicles.Car, Bike: concrete types.
+  
   ParkingSlot: slot assigned to vehicles.
+  
   ParkingFloor: holds multiple slots.
+  
   ParkingLot: coordinates all floors.
+  
   Ticket: generated when a vehicle enters.
+  
   EntryGate and ExitGate: handle incoming and outgoing logic.
 
 Responsibilities:
@@ -53,27 +63,27 @@ Responsibilities:
 
 5. ParkingLot:
    
-  Central class coordinating everything.
+   Central class coordinating everything.
 
-  Has multiple floors and entry/exit gates.
+   Has multiple floors and entry/exit gates.
 
-  Method to assign slots across floors.
+   Method to assign slots across floors.
 
 6. Ticket:
 
-  Generated when a vehicle enters.
+   Generated when a vehicle enters.
    
 Relationships:
 
- ParkingLot → has many ParkingFloors.
+  ParkingLot → has many ParkingFloors.
 
- ParkingFloor → has many ParkingSlots.
+  ParkingFloor → has many ParkingSlots.
 
- ParkingSlot → may have a Vehicle.
+  ParkingSlot → may have a Vehicle.
 
- Ticket → maps a Vehicle to a ParkingSlot.
+  Ticket → maps a Vehicle to a ParkingSlot.
 
- EntryGate → allocates a ParkingSlot, issues a Ticket.
+  EntryGate → allocates a ParkingSlot, issues a Ticket.
 
- ExitGate → takes a Ticket and releases the slot.
+  ExitGate → takes a Ticket and releases the slot.
 
