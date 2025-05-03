@@ -87,3 +87,4 @@ Relationships:
 
   ExitGate → takes a Ticket and releases the slot.
 
+"In summary This project implements a basic Parking Lot System using object-oriented design principles in Java. It supports multiple vehicle types, parking floors, and assigns available slots dynamically".
